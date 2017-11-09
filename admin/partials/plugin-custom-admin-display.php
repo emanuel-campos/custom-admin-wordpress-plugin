@@ -13,3 +13,6 @@
 ?>
 
 <!-- This file should primarily consist of HTML with a little bit of PHP. -->
+<div class="wrap">
+	<h1 class="wp-heading-inline">Custom Admin</h1>
+</div>
