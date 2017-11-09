@@ -99,4 +99,28 @@ class Custom_Admin_Admin {
 
 	}
 
+	/**
+	 * Add page menu in admin panel
+	 *
+	 */
+	public function menu_page(){
+		add_menu_page(
+			__('Custom Admin', 'custom-admin'),
+			'Custom Admin',
+			'manage_options',
+			'custom-admin-configuracoes',
+			array($this, 'display_custom_page'),
+			'dashicons-layout',
+			null
+		);
+	}
+
+	/**
+	 * Display callback for the Custom Admin page
+	 *
+	 */
+	public function display_custom_page(){
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/partials/plugin-custom-admin-display.php';
+	}
+
 }
